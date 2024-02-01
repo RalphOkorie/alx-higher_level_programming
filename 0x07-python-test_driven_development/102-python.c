@@ -1,5 +1,6 @@
-102-python.c
-#include "Python.h"
+#include <stdio.h>
+#include <string.h>
+#include <Python.h>
 
 /**
  * print_python_string - Prints information about Python strings.
@@ -26,4 +27,3 @@ void print_python_string(PyObject *p)
 		printf("  type: compact unicode object\n");
 	printf("  length: %ld\n", length);
 	printf("  value: %ls\n", PyUnicode_AsWideCharString(p, &length));
-}
